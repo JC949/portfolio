@@ -1,0 +1,263 @@
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #333;
+    color: white;
+    line-height: 1.6;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: rgba(0,0,0,0.7);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+    padding: 1rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4;
+    background-image: linear-gradient(
+      to right,
+      skyblue,
+      skyblue 50%,
+      white 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+  
+  .navbar ul li a:before {
+    content: '';
+    background: skyblue;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+  }
+  
+  .navbar ul li a:hover {
+    background-position: 0;
+    color:skyblue;
+  }
+  
+  .navbar ul li a:hover::before {
+    width: 100%;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center;
+  }
+
+  section h1 {
+    font-size: 4rem;
+  }
+
+  section p {
+    font-size: 1.5rem;
+  }
+
+  section#home {
+    background: url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?auto=format&fit=crop&q=80&w=2693&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/
+    cover;
+  }
+
+  section#about {
+    background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2672&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/
+    cover;
+  }
+
+  section#education {
+    background: url('https://images.unsplash.com/photo-1534996858221-380b92700493?auto=format&fit=crop&q=80&w=2531&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/
+    cover;
+  }
+
+  section#projects {
+    background: url('https://images.unsplash.com/photo-1511798616182-aab3698ac53e?auto=format&fit=crop&q=80&w=2552&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/
+    cover;
+  }
+
+  section#skills {
+      background: url('https://images.unsplash.com/photo-1478502161016-a691575b097b?auto=format&fit=crop&q=80&w=2670&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/
+      cover;
+    }
+    
+    section#contact {
+      background: url('https://images.unsplash.com/photo-1507281736509-c6289f1ea0f8?auto=format&fit=crop&q=80&w=2670&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/
+      cover;
+    color: black;
+  }
+
+  .return-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4;
+    background-image: linear-gradient(
+      to right,
+      skyblue,
+      skyblue 50%,
+      black 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    font-weight: bold;
+    margin-top: 65px;
+  }
+
+  .return-link:before {
+    content: '';
+    background: skyblue;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+  }
+  
+  .return-link:hover {
+    background-position: 0;
+    color:skyblue;
+  }
+
+  .return-link:hover::before {
+    width: 100%;
+  }
+
+  .social-media-links {
+    margin-top: 20px;
+  }
+
+  .social-media-links a {
+    padding: 0 10px;
+    margin: 5px;
+  }
+
+  .social-media-links a:hover img {
+    animation: shake 0.5s ease-in-out;
+  }
+
+  input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4;
+    background-image: linear-gradient(
+      to right,
+      skyblue,
+      skyblue 50%,
+      black 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    font-weight: bold;
+  }
+
+  input[type=submit]::before {
+    content: '';
+    background: skyblue;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+  }
+  
+  .return-link:hover {
+    background-position: 0;
+    color:skyblue;
+  }
+
+  .return-link:hover::before {
+    width: 100%;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: azure;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .contact-form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+  
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+  }
+  
