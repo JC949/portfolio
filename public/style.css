@@ -91,6 +91,28 @@ body {
     scroll-snap-align: center;
   }
 
+  /* New CSS classes for fixed section titles */
+  .section-title {
+    font-size: 2rem;
+    z-index: 1;
+    transition: top 0.3s;
+    padding-top: 50px;
+  }
+
+  .fixed-title {
+    position: fixed;
+    top: 60px; /* Height of your fixed navbar */
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 2rem;
+    z-index: 1;
+  }
+
+
   section h1 {
     font-size: 4rem;
   }
@@ -147,7 +169,8 @@ body {
     transition: all 0.3s ease-in-out;
     position: relative;
     font-weight: bold;
-    margin-top: 65px;
+    margin-top: 17px;
+    font-size: 1.2rem;
   }
 
   .return-link:before {
@@ -175,7 +198,7 @@ body {
   }
 
   .social-media-links a {
-    padding: 0 10px;
+    padding: 0 20px;
     margin: 5px;
   }
 
@@ -193,41 +216,25 @@ body {
     margin-bottom: 16px; /* Bottom margin */
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
   }
-  
-  /* Style the submit button with a specific background color etc */
-  input[type=submit] {
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #f4f4f4;
-    background-image: linear-gradient(
-      to right,
-      skyblue,
-      skyblue 50%,
-      black 50%
-    );
-    background-size: 200% 100%;
-    background-position: -100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.3s ease-in-out;
-    position: relative;
-    font-weight: bold;
+
+  #submit {
+    font-size: 1.5rem;
+    background-color: white;
+    color: #091f36;
+    padding: 10px;
+    margin: -20px -20px 20px -20px;
+    border: 2px solid white; /* Add a border on hover */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
   }
 
-  input[type=submit]::before {
-    content: '';
-    background: skyblue;
-    display: block;
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 3px;
+  #submit:hover {
+    font-size: 1.5rem; /* Increase font size on hover */
+    background-color: rgba(0, 0, 0, 0.7); /* Darken the background color on hover */
+    color: skyblue; /* Change text color on hover */
+    border: 2px solid skyblue; /* Add a border on hover */
+    transition: all 0.3s ease-in-out; /* Smooth transition effect */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
   }
   
   .return-link:hover {
@@ -247,10 +254,78 @@ body {
   /* Add a background color and some padding around the form */
   .contact-form {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    border-color: black;
+    border-width: 3px;
+    background-color: #091f36;
+    color: white;
+    font-family: 'Playpen Sans';
+    font-size: 1.5rem;
     padding: 20px;
-    margin-top: 50px;
+    margin-top: 20px;
+    border: 3px solid black;
   }
+
+  .contact-title {
+    padding-top: 35px;
+  }
+
+/* Styles for the skills container */
+.skills-container {
+  display: flex;
+  justify-content: space-between; /* Distribute the skills sets horizontally */
+  align-items: flex-start; /* Align skills sets at the top */
+  flex-wrap: wrap; /* Allow skills sets to wrap to the next line if the screen is narrow */
+  width: 890px;
+}
+
+.skills-title {
+  padding-top: 45px;
+}
+
+/* Styles for each skills set */
+.skills-set {
+  flex: 1;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 5px;
+  margin: 10px;
+  margin-left: 80px;
+  border: 3px solid black;
+}
+
+.skills-set h2 {
+  font-size: 1.5rem;
+  background-color: #287c8b;
+  color: white;
+  padding: 10px;
+  margin: -20px -20px 20px -20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.skills-set ul {
+  list-style: disc; /* Use disc as bullet points */
+  padding-left: 20px;
+}
+
+.skills-set ul li {
+  text-align: left;
+  font-family: 'Playpen Sans';
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* Media query to adjust layout for small screens */
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column; /* Stack the skills sets for small screens */
+  }
+
+  .skills-set {
+    width: 100%; /* Full width for small screens */
+  }
+}
 
   
   @keyframes shake {
