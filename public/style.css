@@ -397,9 +397,38 @@ body {
   border: 3px solid black;
 }
 
+.github-redirect {
+  font-size: 2rem;
+  text-decoration: underline;
+  color: white;
+  margin: 0 auto; /* Center horizontally */
+  text-align: center; /* Center text within the container */
+  display: inline-block; /* Change it to inline-block */
+  padding: 20px; /* Add padding for spacing */
+  transition: all 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.github-redirect a {
+  text-decoration: none; /* Remove underlines */
+  color: white; /* Set the link color to white */
+}
+
+.github-redirect a:hover {
+  color: skyblue;
+  border: 3px solid skyblue;
+  text-decoration-color: skyblue;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.projects-title {
+  padding-top: 50px;
+}
+
+
 .skills-set h2 {
   font-size: 1.5rem;
-  background-color: #287c8b;
+  background-color: skyblue;
   color: white;
   padding: 10px;
   margin: -20px -20px 20px -20px;
@@ -419,12 +448,56 @@ body {
   margin: 10px 0;
 }
 
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding-left: 100px;
+}
+
+.jc-homelistings-video-container {
+  padding-left: 150px;
+}
+
+.instagramp-2-video-container {
+  padding-left: 150px;
+
+}
+
+.top-video-row, .bottom-video-row {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 250px;
+}
+
+.video-box {
+  margin: 10px;
+  text-align: center;
+}
+
+.autoplay-video {
+  border: 3px solid white;
+  border-radius: 5px;
+}
+
+.video-box p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center; /* Center the caption text */
+}
+
 /* Media query to adjust layout for small screens */
 @media (max-width: 768px) {
   .skills-container {
     flex-direction: column; /* Stack the skills sets for small screens */
   }
 
+  .video-box {
+    width: 100%; /* Stack in a single column on smaller screens */
+    margin: 10px 0;
+  }
   .skills-set {
     width: 100%; /* Full width for small screens */
   }
