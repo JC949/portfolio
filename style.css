@@ -425,6 +425,10 @@ body {
   padding-top: 50px;
 }
 
+.message {
+  padding-top: 20px;
+}
+
 
 .skills-set h2 {
   font-size: 1.5rem;
